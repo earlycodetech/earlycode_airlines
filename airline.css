@@ -1,0 +1,164 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(imggggg/airplane-sunset.jpg) ;
+    background-size: cover;
+    color: black;
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    color: #ffce14;
+    background: #0f245357;
+}
+header div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+    margin: 0 2rem;
+}
+header div i{
+    font-size: 2rem;
+    margin: 1rem;
+}
+header nav{
+    padding: 1rem 2rem;
+}
+nav ul li{
+    list-style: none;
+    display: inline;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+nav li a{
+    padding: 1rem;
+    margin: 1rem;
+    text-decoration: none;
+    color: white;
+    transition: all 250ms ease-in;
+}
+nav li a:hover{
+    background: #ffcc145d;
+    color: white;
+    border: 1px solid #ffce14;
+}
+
+.titles{
+    color: white;
+    text-align: center;
+    width: 50vw;
+    margin: 0 auto;
+}
+.titles h1{
+    font-family: sans-serif;
+    font-size: 5rem;
+    margin-bottom: 0;
+    text-shadow: 3px 3px 1px black;
+    color: #ffce14;
+}
+.titles p{
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 1px black;
+}
+
+.container-boxes{
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 100vw;
+}
+.box{
+    background: #ffce14;
+    margin: 1rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 350px;
+    max-height: 180px;
+    min-height: 180px;
+    transition: all 250ms ease-in;
+}
+.box:hover{
+    background: rgba(255, 255, 255, 0.7);
+    transform: translateY(-20%);
+}
+.box a{
+    text-decoration: none;
+    color: black;
+}
+.icon{
+    font-size: 3rem;
+    padding: 1rem;
+}
+.text h3{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 0;
+    color: black;
+}
+.text p{
+    margin-top: 1rem;
+    line-height: 1.5rem;
+    text-align: left;
+}
+.text{
+    padding: 0.5rem;
+}
+
+@media(max-width: 1160px){
+    .icon{
+        font-size: 2rem;
+        padding: 0.5rem;
+    }
+    .text h3{
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        margin-bottom: 0;
+        font-size: 1rem;
+    }
+    .text p{
+        margin-top: 1rem;
+        line-height: 1.5rem;
+        text-align: left;
+        font-size: 0.8rem;
+    }
+    nav li a:hover{
+        background: none;
+        color: black;
+    }
+}
+
+@media(max-width: 850px){
+    body{
+        height: 100%;
+    }
+    .container-boxes{
+        flex-direction: column;
+    }
+    .box:hover{
+        background: rgba(255, 255, 255, 0.7);
+        transform: none;
+    }
+    .titles h1{
+        font-size: 3rem;
+    }
+}
