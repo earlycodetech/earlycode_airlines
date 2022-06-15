@@ -59,17 +59,17 @@
                     </div>
                     <div class="col-md-6 text-white mb-3">
                         <label>Date of Birth:</label>
-                        <input type="text" onfocus="this.type='date'" class="form-control bg-transparent border-0 border-bottom border-white text-white rounded-0">
+                        <input type="text" onfocus="this.type='date'" name="dob" class="form-control bg-transparent border-0 border-bottom border-white text-white rounded-0">
                     </div>
 
                     <div class="col-md-6 text-white mb-3">
                         <label>Password:</label>
-                        <input type="text" class="form-control bg-transparent border-0 border-bottom border-white text-white rounded-0">
+                        <input type="text" name="password" class="form-control bg-transparent border-0 border-bottom border-white text-white rounded-0">
                     </div>
 
                     <div class="col-md-6 text-white mb-3">
                         <label>Confirm Password:</label>
-                        <input type="text" class="form-control bg-transparent border-0 border-bottom border-white text-white rounded-0">
+                        <input type="text" name="cpass" class="form-control bg-transparent border-0 border-bottom border-white text-white rounded-0">
                     </div>
 
 
