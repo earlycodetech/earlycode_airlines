@@ -28,14 +28,14 @@
     <?php require_once "assets/modules/nav.php"; ?>
 
     <div class="container">
-        <form class="form-group" action="assets/config/reg_control" method="POST">
+        <form class="form-group" action="assets/config/login_control" method="POST">
          
             <div id="form" class="mt-5">
                 <h2 class="text-center text-white">Login to your account</h2>
                 <div class="row mt-5">
                     <div class="col-md-6 text-white mb-3">
                         <label>Email/Username: </label>
-                        <input type="text" name="email" class="form-control bg-transparent border-0 border-bottom border-white text-white rounded-0">
+                        <input type="text" name="emailUsername" class="form-control bg-transparent border-0 border-bottom border-white text-white rounded-0">
                     </div>
                     <div class="col-md-6 text-white mb-3">
                         <label>Password:</label>

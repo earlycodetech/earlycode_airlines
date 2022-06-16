@@ -35,3 +35,9 @@
     function redirect($loc){
         header("Location: ".$loc);
     }
+
+    function auth(){
+        if (!isset($_SESSION['id'])) {
+            redirect("../index");
+        }
+    }
