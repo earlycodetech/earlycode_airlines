@@ -25,6 +25,7 @@
            if (password_verify($password,$returnedPassword)) {
                 // Redirect to Dashboard
                 $_SESSION['id'] = $row['id'];
+                $_SESSION['role'] = $row['user_role'];
                 $_SESSION['success_msg'] = "Welcome ".$row['username'];
                 redirect("../../portal/dashboard");
            }else{

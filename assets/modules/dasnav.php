@@ -62,16 +62,16 @@
             <!-- Dashboard -->
             <li class="menu-item active">
               <a href="dashboard" class="menu-link">
-                <i class="menu-icon tf-icons fas fa-tachometer"></i>
+                <i class="menu-icon tf-icons fa fa-tachometer-alt"></i>
                 <div data-i18n="Analytics">Dashboard</div>
               </a>
             </li>
 
             <!-- Layouts -->
             <li class="menu-item">
-              <a href="#" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-layout"></i>
-                <div data-i18n="Layouts">Layouts</div>
+              <a href="profile" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons fa fa-id-card"></i>
+                <div data-i18n="Layouts">Profile</div>
               </a>
             </li>
           </ul>
@@ -113,7 +113,7 @@
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-                      <img src="../assets/img/how-bg.jpg" alt class="w-px-40 h-auto rounded-circle" />
+                      <img src="../assets/img/how-bg.jpg" width="40" height="40" class="rounded-circle" />
                     </div>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end">
@@ -121,7 +121,7 @@
                       <a class="dropdown-item" href="#">
                         <div class="d-flex">
                           <div class="flex-grow-1">
-                            <span class="fw-semibold d-block">John Doe</span>
+                            <span class="fw-semibold d-block"><?php echo $row['firstname']." ".$row['lastname']; ?></span>
                           </div>
                         </div>
                       </a>
@@ -130,24 +130,15 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a class="dropdown-item" href="profile">
                         <i class="bx bx-user me-2"></i>
                         <span class="align-middle">My Profile</span>
                       </a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a class="dropdown-item" href="password">
                         <i class="bx bx-cog me-2"></i>
                         <span class="align-middle">Settings</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        <span class="d-flex align-items-center align-middle">
-                          <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
-                          <span class="flex-grow-1 align-middle">Billing</span>
-                          <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
-                        </span>
                       </a>
                     </li>
                     <li>
