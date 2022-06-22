@@ -26,6 +26,7 @@
                 // Redirect to Dashboard
                 $_SESSION['id'] = $row['id'];
                 $_SESSION['role'] = $row['user_role'];
+                $_SESSION['last_login_timestamp'] = time();
                 $_SESSION['success_msg'] = "Welcome ".$row['username'];
                 redirect("../../portal/dashboard");
            }else{

@@ -20,6 +20,7 @@
       $password = $_POST['password'];
       $cpassword = $_POST['cpass'];
       $role = 'user';
+      $stat = 'available';
       $date = date("Y-m-d h:i:s");
 
       // Build Constraints
@@ -36,7 +37,7 @@
          // Steps to insert
 
          // 1: Prepare SQL Command
-         $sql = "INSERT INTO users(firstname,lastname,username,phone,email,dob,user_password,user_role,date_created) VALUES(?,?,?,?,?,?,?,?,?)";
+         $sql = "INSERT INTO users(firstname,lastname,username,phone,email,dob,user_password,user_role,trash_stat,date_created) VALUES(?,?,?,?,?,?,?,?,?,?)";
 
          // 2: Initialize Connection to database
          $stmt = mysqli_stmt_init($dbConnect);
@@ -45,7 +46,7 @@
          mysqli_stmt_prepare($stmt,$sql);
 
          // 4: Bind Our Values to Placeholders
-         mysqli_stmt_bind_param($stmt,"sssssssss",$firstName,$lastName,$userName,$phone,$email,$dob,$password,$role,$date);
+         mysqli_stmt_bind_param($stmt,"ssssssssss",$firstName,$lastName,$userName,$phone,$email,$dob,$password,$role,$stat,$date);
 
          $execute = mysqli_stmt_execute($stmt);
          if ($execute) {

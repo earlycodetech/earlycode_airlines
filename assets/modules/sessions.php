@@ -41,3 +41,13 @@
             redirect("../index");
         }
     }
+
+
+    function activity(){
+        if((time() - $_SESSION['last_login_timestamp']) > 900) // 900 = 15 * 60  
+           {  
+                header("Location:../assets/config/logout.php");  
+           }else{
+              $_SESSION['last_login_timestamp'] = time();
+           }    
+    }
