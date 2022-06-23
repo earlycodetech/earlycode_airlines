@@ -74,6 +74,14 @@
                 <div data-i18n="Layouts">Profile</div>
               </a>
             </li>
+            <?php if($_SESSION['role'] == 'admin'){?>
+              <li class="menu-item">
+              <a href="routes" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons fa fa-id-card"></i>
+                <div data-i18n="Layouts">Routes</div>
+              </a>
+            </li>
+            <?php } ?>
           </ul>
         </aside>
         <!-- / Menu -->
@@ -113,7 +121,14 @@
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-                      <img src="../assets/img/how-bg.jpg" width="40" height="40" class="rounded-circle" />
+                      <img src="../assets/img/uploads/<?php
+                            $img = $row['profileimg'];
+                            if (empty($img)) {
+                                echo "user.png";
+                            }else{
+                                echo "$img?".mt_rand();
+                            }
+                        ?>" width="40" height="40" class="rounded-circle" />
                     </div>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end">

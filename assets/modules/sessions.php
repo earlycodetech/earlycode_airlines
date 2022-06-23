@@ -9,7 +9,14 @@
             $message .= htmlentities($_SESSION['error_msg']);
             $message .= " </strong>
             <button type=\"button\" class=\"btn fas fa-times text-white p-2\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button>
-            </div>";
+            </div>    <style>
+            .alertMsg{
+                top: 10%;
+                right: 10px;
+                z-index: 999999999999999;
+                color: white;
+            }
+        </style>";
     
             $_SESSION['error_msg'] = null;
             return $message;
@@ -25,7 +32,15 @@
             $message .= htmlentities($_SESSION['success_msg']);
             $message .= " </strong>
             <button type=\"button\" class=\"btn fas fa-times text-white p-2\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button>
-            </div>";
+            </div>
+            <style>
+            .alertMsg{
+                top: 10%;
+                right: 10px;
+                z-index: 999999999999999;
+                color: white;
+            }
+        </style>";
     
             $_SESSION['success_msg'] = null;
             return $message;
@@ -39,6 +54,12 @@
     function auth(){
         if (!isset($_SESSION['id'])) {
             redirect("../index");
+        }
+    }
+    
+    function adminAuth(){
+        if ($_SESSION['role'] !== 'admin') {
+            redirect("dashboard");
         }
     }
 

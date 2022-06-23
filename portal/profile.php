@@ -17,10 +17,24 @@ require "../assets/modules/dasnav.php";
         
         <div class="card p-3 shadow-lg w-75 mx-auto">
             <?php echo errorMsg(); echo successMsg(); ?>
-            <form action="../assets/config/update_ctrl" method="POST">
+     
                 <div class="d-flex justify-content-end">
-                    <img src="../assets/img/abidijan.jpeg" width="150" height="150" class="img-thumbnail p-1 border">
+                    <div class="">
+                        <img src="../assets/img/uploads/<?php
+                            $img = $row['profileimg'];
+                            if (empty($img)) {
+                                echo "user.png";
+                            }else{
+                                echo "$img?".mt_rand();
+                            }
+                        ?>" width="150" height="150" class="img-thumbnail d-block mx-auto p-1 border"><br>
+                        <form action="../assets/config/upload_control" method="post" enctype="multipart/form-data">
+                            <input type="file" name="file" class="form-control mb-3">
+                            <button type="submit" name="uploadFile" class="btn btn-primary rounded-0">Upload</button>
+                        </form>
+                    </div>
                 </div>
+                <form action="../assets/config/update_ctrl" method="POST">
                 <div class="row mt-5">
                     <div class="col-md-6 text-dark mb-3">
                         <label>First Name:</label>

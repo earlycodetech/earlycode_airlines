@@ -13,14 +13,7 @@
     <link rel="stylesheet" href="assets/css/booking-form.css">
     <link rel="stylesheet" href="assets/css/bootstrap5.min.css">
     <link rel="stylesheet" href="assets/fontawsome/css/all.css">
-    <style>
-        .alertMsg{
-            top: 10%;
-            right: 10px;
-            z-index: 999999999999999;
-            color: white;
-        }
-    </style>
+
 </head>
 
 <body>
