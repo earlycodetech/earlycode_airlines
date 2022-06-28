@@ -10,7 +10,9 @@
        redirect("logout");
     }else{
       // Collect All required data
-
+      $rid = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+      $rid = str_shuffle($rid);
+      $rid = substr($rid, 3,14);
       $from = $_POST['from'];
       $to = $_POST['to'];
       $price = $_POST['price'];
@@ -19,7 +21,7 @@
 
 
          // 1: Prepare SQL Command
-         $sql = "INSERT INTO our_routes(from_value,to_value,price_value,no_passengers,date_created) VALUES(?,?,?,?,?)";
+         $sql = "INSERT INTO our_routes(rid,from_value,to_value,price_value,no_passengers,date_created) VALUES(?,?,?,?,?,?)";
 
          // 2: Initialize Connection to database
          $stmt = mysqli_stmt_init($dbConnect);
@@ -28,7 +30,7 @@
          mysqli_stmt_prepare($stmt,$sql);
 
          // 4: Bind Our Values to Placeholders
-         mysqli_stmt_bind_param($stmt,"sssss",$from,$to,$price,$noPass,$date);
+         mysqli_stmt_bind_param($stmt,"ssssss",$rid,$from,$to,$price,$noPass,$date);
 
          $execute = mysqli_stmt_execute($stmt);
          if ($execute) {

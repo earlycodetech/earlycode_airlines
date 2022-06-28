@@ -74,6 +74,18 @@
                 <div data-i18n="Layouts">Profile</div>
               </a>
             </li>
+            <li class="menu-item">
+              <a href="bookings" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons fa fa-id-card"></i>
+                <div data-i18n="Layouts">Bookings</div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="password" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons fa fa-id-card"></i>
+                <div data-i18n="Layouts">Settings</div>
+              </a>
+            </li>
             <?php if($_SESSION['role'] == 'admin'){?>
               <li class="menu-item">
               <a href="routes" class="menu-link menu-toggle">

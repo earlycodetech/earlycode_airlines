@@ -128,8 +128,9 @@ require "../assets/modules/dasnav.php";
                                                         <!-- END OF PAYMENT SCRIPT -->
                                                     </div>
                                                     <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                                            <a href="../assets/config/params?book=<?php echo $prow['rid'] ?>" class="btn btn-primary">
+                                                                Confirm
+                                                            </a>
                                                     </div>
                                                 </div>
                                             </div>
